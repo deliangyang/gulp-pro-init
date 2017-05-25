@@ -1,0 +1,36 @@
+$colorccc: #333;
+
+$top: top !default;
+
+body {
+  $colorccc: #fff !default;
+  background-color: $colorccc;
+  color: #00AA00;
+  font-size: 100px;
+}
+
+div {
+  margin-#{$top}: 20px;
+}
+
+
+@for $item from 1 through 3 {
+  .item-#{$item} {
+      width: 2em * $item;
+  }
+}
+
+%ir{
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+h1{
+  border: 4px solid #ff9aa9;
+}
+
+.speaker{
+  @extend h1;
+  border-width: 2px;
+}
